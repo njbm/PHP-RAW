@@ -3,6 +3,7 @@
     $mainnavitems = ['Dashboard','Layouts','Themes','Starter Kits','Change Log',' RTL version'];
     $formnavitems = ['Form Component','JSON Forms', 'Text Editors', 'Pickers'];
     $componentsnavitems=['Basic Component','Advance Component','Extra Components'];
+    $layoutitems=['Page Layout', 'Sidebar','Navbar','Vertical Navigation','Horizontal Navigation'];
 ?>
 
         <!-- Main sidebar -->
@@ -66,6 +67,16 @@
                             <a href="index.html" class="nav-link active">
                             <i class="icon-home4"></i>
                         <span> '. $componentsnavitem.' </span>
+                    </a>
+                </li>';
+                }
+            }
+            if($key === 4){
+                foreach($layoutitems as $layoutitem){
+                    echo '<li class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                            <i class="icon-home4"></i>
+                        <span> '. $layoutitem.' </span>
                     </a>
                 </li>';
                 }
