@@ -61,17 +61,8 @@
                 </li>';
                 }
             }
+            
             if($key === 3){
-                foreach($componentsnavitems as $componentsnavitem){
-                    echo '<li class="nav-item">
-                            <a href="index.html" class="nav-link active">
-                            <i class="icon-home4"></i>
-                        <span> '. $componentsnavitem.' </span>
-                    </a>
-                </li>';
-                }
-            }
-            if($key === 4){
                 foreach($layoutitems as $layoutitem){
                     echo '<li class="nav-item">
                             <a href="index.html" class="nav-link active">
