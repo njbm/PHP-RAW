@@ -1,0 +1,31 @@
+[
+    {
+        "Slider Management":
+        [
+            "Create a Slide",
+            "Slide List"
+        ]
+    },
+  
+    {
+        "Product":[
+            "Create Product",
+            "Product Lists",
+            "Category",
+            "Category List",
+            "Change Log",
+            " RTL version"
+        ]
+    },
+
+    {   
+            "Forms":           
+            [
+                "Form Components" ,
+                "JSON Forms", 
+                "Text Editors", 
+                "Pickers", 
+                "Form Layouts"
+            ]
+    }
+]
