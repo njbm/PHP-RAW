@@ -1,0 +1,18 @@
+[
+    {
+        "Slider Management":[
+            "Create a Slide",
+            "Slide List"
+        ]
+    }
+
+    ,{
+        "Slider Management":[
+            {
+            "label":"Create a Slide",
+            "url":"icon",
+            "icon":"icon"
+            }
+        ]
+    }
+]

@@ -16,4 +16,5 @@ $docroot = $_SERVER['DOCUMENT_ROOT'];
 $partials = $docroot.DIRECTORY_SEPARATOR.'admin/partials'.DIRECTORY_SEPARATOR;
 $frontend_partials = $docroot.DIRECTORY_SEPARATOR.'frontend/partials'.DIRECTORY_SEPARATOR;
 $portal_partials = $docroot.DIRECTORY_SEPARATOR.'portal/partials'.DIRECTORY_SEPARATOR;
+$datasource = $docroot.DIRECTORY_SEPARATOR.'datasource'.DIRECTORY_SEPARATOR;
 

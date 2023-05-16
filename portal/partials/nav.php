@@ -1,3 +1,11 @@
+<?php
+    $json_file = file_get_contents("../datasource/sidebar.json");
+    $data = json_decode($json_file, true);
+
+
+?>
+
+
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
