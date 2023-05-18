@@ -70,7 +70,7 @@
         </div> -->
         
         <div class="carousel-item <?=$active?>">
-            <img src="<?=$slide->src?>" class="d-block w-100" alt="<?=$slide->alt?>">
+            <img src="<?=$slide->src?>" class="d-block w-100" alt="<?=$slide->alt?>" height="700">
             <div class="carousel-caption d-none d-md-block">
                 <h5><?=$slide->title?></h5>
                 <p><?=$slide->caption?></p>

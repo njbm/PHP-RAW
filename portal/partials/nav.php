@@ -1,6 +1,5 @@
 <?php
-    $json_file = file_get_contents("../datasource/sidebar.json");
-    $data = json_decode($json_file, true);
+
 
 
 ?>

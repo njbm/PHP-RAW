@@ -36,8 +36,8 @@
                 </div>
             </div>
 
-            <div class="card-body" style="">
-                <form action="slider_create_processor.php">
+            <div class="card-body" >
+                <form action="slider_create_processor.php" method="GET">
                 <!-- <div class="form-group">
                     <label>ID</label>
                     <input type="text" class="form-control" placeholder="Give a ID">
@@ -48,25 +48,25 @@
                 </div> -->
                 <div class="form-group">
                     <label>Title</label>
-                    <input type="text" class="form-control" placeholder="Give a Title">
+                    <input type="text" name="title" class="form-control" placeholder="Give a Title">
                 </div>
                 <div class="form-group">
                     <label>Alt</label>
-                    <input type="text" class="form-control" placeholder="Alternative Name">
+                    <input type="text" name="alt" class="form-control" placeholder="Alternative Name">
                 </div>
 
                 <div class="form-group">
                     <label>Caption</label>
-                    <input type="password" class="form-control" placeholder="Add a Caption">
+                    <input type="text" name="caption" class="form-control" placeholder="Add a Caption">
                 </div>
                 <div class="form-group">
                     <label>Url</label>
-                    <input type="password" class="form-control" placeholder="Add a Caption">
+                    <input type="text" name="src" class="form-control" placeholder="Add a Caption">
                 </div>
 
                 <div class="form-group">
                     <label>Add Picture</label>
-                    <div class="uniform-uploader"><input type="file" class="form-input-styled" data-fouc="">
+                    <div class="uniform-uploader"><input type="file"  class="form-input-styled" data-fouc="">
                         <span class="filename text-muted" style="user-select: none;">No file selected</span>
                         <span class="action btn bg-pink-400 legitRipple" style="user-select: none;">Choose File</span>
                     </div>
@@ -75,7 +75,7 @@
 
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea rows="4" cols="4" class="form-control" placeholder="Write a Description"></textarea>
+                    <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
                 </div>
 
                 <div class="text-left">
