@@ -11,6 +11,11 @@ function dd($var){
    die();
 }
 
+function redirect($url)
+{
+    header("location:$url");
+}
+
 $webroot = "http://SP.test".DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
 $partials = $docroot.DIRECTORY_SEPARATOR.'admin/partials'.DIRECTORY_SEPARATOR;

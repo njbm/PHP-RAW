@@ -52,7 +52,12 @@
 		</ul>
 
 		<a href="slider_create.php">Create</a>
+<<<<<<< HEAD
 		|<a href="slider_create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
+=======
+		|<a href="slider-create.php">Trash (Delete | Restore)</a>
+		 | Download XL | Download PDF | Print View
+>>>>>>> 3d63fe1ae30567f3cd0e068105167b8e233942a0
 	</div>
 
 	<div class="table-responsive">
@@ -79,7 +84,16 @@
 				<td><img src="<?=$slide->src?>" height="70"></td>
 				<td><?=$slide->alt?></td>
 				<td><?=$slide->caption?></td>
-				<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>| Edit | Delete | Activate/InActive | Copy</td>
+				<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>
+
+				| Edit |
+				<form action="slider_delete.php" method="post">
+				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
+					<button type="submit">Delete</button>
+					<input type="hidden" name="id" value="<?=$slide->id?>" />
+				</form>
+				<a href="slider_delete.php?id=<?=$slide->id?>">Delete</a>
+				| Activate/InActive | Copy</td>
 			</tr>
 <?php
 endforeach
