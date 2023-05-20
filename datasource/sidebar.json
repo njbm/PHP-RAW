@@ -1,0 +1,30 @@
+{
+    "sidebarItems": [
+      {
+        "label": "Home",
+        "icon": "home",
+        "link": "/"
+      },
+      {
+        "label": "About",
+        "icon": "info",
+        "link": "/about",
+        "subItems": [
+          {
+            "label": "Mission",
+            "link": "/about/mission"
+          },
+          {
+            "label": "Vision",
+            "link": "/about/vision"
+          }
+        ]
+      },
+      {
+        "label": "Contact",
+        "icon": "mail",
+        "link": "/contact"
+      }
+    ]
+  }
+  

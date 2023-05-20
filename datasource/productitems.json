@@ -1,0 +1,51 @@
+[
+    {
+      "id":1,
+      "uuid":"jm1",
+      "src": "assets/images/slider/1.jpg",
+      "title": "Product 1",
+      "caption": "This the slide number 1",
+      "price": "32$"
+    },
+    {
+      "id":1,
+      "uuid":"jm1",
+      "src": "assets/images/slider/1.jpg",
+      "title": "Product 1",
+      "caption": "This the slide number 1",
+      "price": "32$"
+    },
+    {
+      "id":1,
+      "uuid":"jm1",
+      "src": "assets/images/slider/1.jpg",
+      "title": "Product 1",
+      "caption": "This the slide number 1",
+      "price": "32$"
+    },
+    {
+      "id":1,
+      "uuid":"jm1",
+      "src": "assets/images/slider/1.jpg",
+      "title": "Product 1",
+      "caption": "This the slide number 1",
+      "price": "32$"
+    }
+,
+    {
+      "id":1,
+      "uuid":"jm1",
+      "src": "assets/images/slider/1.jpg",
+      "title": "Product 1",
+      "caption": "This the slide number 1",
+      "price": "32$"
+    },
+    {
+      "id":1,
+      "uuid":"jm1",
+      "src": "assets/images/slider/1.jpg",
+      "title": "Product 1",
+      "caption": "This the slide number 1",
+      "price": "32$"
+    }
+]

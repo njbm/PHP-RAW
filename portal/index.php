@@ -8,10 +8,15 @@
 
 <body>
     <!--START NAVBAR--->
-    <?php include_once($portal_partials . 'nav.php'); ?>
+    <?php include_once($portal_partials . 'nav.php'); ?>        <!-- Nav--> 
 
 
-    <?php include_once($portal_partials . 'slider.php'); ?>
+    <?php include_once($portal_partials . 'slider.php'); ?>     <!-- Slider--> 
+
+    <?php include_once($portal_partials. 'product_list.php') ?> <!-- Product--> 
+
+
+    <?php include_once($portal_partials.'footer.php') ?>         <!-- Footer--> 
 
 
 

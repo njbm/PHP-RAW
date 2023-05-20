@@ -48,11 +48,11 @@
 	<div class="card-body">
 		<ul>
 			<li><a href="slider_index_grid.php">Grid View</a></li>
-			<li><a href="slider-index.php">List View</a></li>
+			<li><a href="slider_index.php">List View</a></li>
 		</ul>
 
 		<a href="slider_create.php">Create</a>
-		|<a href="slider-create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
+		|<a href="slider_create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
 	</div>
 
 	<div class="table-responsive">
