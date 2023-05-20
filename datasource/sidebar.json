@@ -1,30 +1,63 @@
-{
-    "sidebarItems": [
+
+[
+  {
+    "name": "Home",
+    "url": "product_index.php",
+    "submenu": [
       {
-        "label": "Home",
-        "icon": "home",
-        "link": "/"
+        "name": "About",
+        "url": "product_index.php"
       },
       {
-        "label": "About",
-        "icon": "info",
-        "link": "/about",
-        "subItems": [
-          {
-            "label": "Mission",
-            "link": "/about/mission"
-          },
-          {
-            "label": "Vision",
-            "link": "/about/vision"
-          }
-        ]
-      },
-      {
-        "label": "Contact",
-        "icon": "mail",
-        "link": "/contact"
+        "name": "Contact",
+        "url": "contact.php"
       }
     ]
+  },
+  {
+    "name": "Slider Managementme",
+    "url": "slider_index.php",
+    "submenu": [
+      
+      {
+        "name": "Create Slider ",
+        "url": "slider_create.php"
+      },
+      {
+        "name": "Slider List View",
+        "url": "slider_index.php"
+      },
+      {
+        "name": "Slider Grid View",
+        "url": "slider_index_grid.php"
+      }
+    ]
+  },
+  {
+    "name": "Product Management",
+    "url": "product_index.php",
+    "submenu": [
+      
+      {
+        "name": "Create Product ",
+        "url": "product_create.php"
+      },
+      {
+        "name": "Products List view",
+        "url": "product_index.php"
+      },
+      {
+        "name": "Product Grid view",
+        "url": "product_index_grid.php"
+      }
+    ]
+  },
+  {
+    "name": "Products",
+    "url": "product_index.php"
+  },
+  {
+    "name": "Services",
+    "url": "services.php"
   }
-  
+]

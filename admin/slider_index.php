@@ -83,15 +83,18 @@
 				<td><img src="<?=$slide->src?>" height="70"></td>
 				<td><?=$slide->alt?></td>
 				<td><?=$slide->caption?></td>
-				<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>
+				<td> 
+				<a href="slider_show.php?id=<?=$slide->id?>"><button class="btn btn-primary">Show</button></a>
+				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
+				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">D</button></a>
 
-				| Edit |
+				
 				<form action="slider_delete.php" method="post">
 				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
-					<button type="submit">Delete</button>
+					<button class="btn btn-danger" type="submit">Delete</button>
 					<input type="hidden" name="id" value="<?=$slide->id?>" />
 				</form>
-				<a href="slider_delete.php?id=<?=$slide->id?>">Delete</a>
+				
 				| Activate/InActive | Copy</td>
 			</tr>
 <?php
