@@ -52,7 +52,8 @@
 		</ul>
 
 		<a href="slider_create.php">Create</a>
-		|<a href="slider-create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
+		|<a href="slider-create.php">Trash (Delete | Restore)</a>
+		 | Download XL | Download PDF | Print View
 	</div>
 
 	<div class="table-responsive">
@@ -79,7 +80,10 @@
 				<td><img src="<?=$slide->src?>" height="70"></td>
 				<td><?=$slide->alt?></td>
 				<td><?=$slide->caption?></td>
-				<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>| Edit | Delete | Activate/InActive | Copy</td>
+				<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>
+
+				| Edit |<a href="slider_delete.php?id=<?=$slide->id?>">Delete</a>
+				| Activate/InActive | Copy</td>
 			</tr>
 <?php
 endforeach
