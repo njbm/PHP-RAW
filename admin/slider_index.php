@@ -82,7 +82,13 @@
 				<td><?=$slide->caption?></td>
 				<td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>
 
-				| Edit |<a href="slider_delete.php?id=<?=$slide->id?>">Delete</a>
+				| Edit |
+				<form action="slider_delete.php" method="post">
+				<a href="slider_delete.php?id=<?=$slide->id?>">Delete</a> 
+					<button type="submit">Delete</button>
+					<input type="hidden" name="id" value="<?=$slide->id?>" />
+				</form>
+				<a href="slider_delete.php?id=<?=$slide->id?>">Delete</a>
 				| Activate/InActive | Copy</td>
 			</tr>
 <?php

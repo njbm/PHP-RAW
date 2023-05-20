@@ -1,33 +1,50 @@
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php')
-?>
-
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
-// Read the JSON file contents into a variable
-$jsonData = file_get_contents($datasource.'slideritems.json'); // Replace 'your_file.json' with the path to your JSON file
+/** collect the intended ID */
+//dd($_POST['id']);
+//$id = $_GET['id'];
+$id = $_POST['id'];
 
-// Decode the JSON data into an associative array
-$data = json_decode($jsonData, true);
+/** communicate with datasource and get data for that id */
+$dataSlides = file_get_contents($datasource . DIRECTORY_SEPARATOR . 'slideritems.json');
+$slides = json_decode($dataSlides);
 
-// Find the index of the object to delete based on the ID
-$indexToDelete = -1;
-foreach ($data as $index => $item) {
-    if ($item['id'] == 1) { // Replace '1' with the desired ID of the object to delete
-        $indexToDelete = $index;
+foreach ($slides as $key => $slide) {
+    if ($slide->id == $id) {
         break;
     }
 }
+// dd($key); to be deleted
 
-// Remove the object from the array if it was found
-if ($indexToDelete !== -1) {
-    array_splice($data, $indexToDelete, 1);
-    echo "Object deleted successfully.";
+/**
+ * option 1
+ * unset($slides[$key]);
+ *  
+ * */
+unset($slides[$key]);
+//reindexing the array
+$slides = array_values($slides);
+$data_slides = json_encode($slides);
+
+
+/**
+ * option 2
+ * array_splice($slides, $key, 1)
+ *  
+ * */
+//array_splice($slides, $key, 1); // it reindexes
+//$data_slides = json_encode($slides);
+
+
+if (file_exists($datasource . "slideritems.json")) {
+    $result = file_put_contents($datasource . "slideritems.json", $data_slides);
+    if ($result) { // edge case is not handled. if it writes nothing. length = 0
+
+        redirect('slider_index.php');
+    }
 } else {
-    echo "Object not found.";
+    echo "File not found";
 }
 
-// Convert the updated data back to JSON
-$jsonData = json_encode($data);
 
-// Save the updated JSON back to the file
-file_put_contents($datasource.'slideritems.json', $jsonData); // Replace 'your_file.json' with the path to your JSON file
 ?>
