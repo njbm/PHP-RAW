@@ -84,7 +84,7 @@
 
 				| Edit |
 				<form action="slider_delete.php" method="post">
-				<!-- <a href="slider_delete.php?id=<?php//=$slide->id?>">Delete</a>  -->
+				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
 					<button type="submit">Delete</button>
 					<input type="hidden" name="id" value="<?=$slide->id?>" />
 				</form>
