@@ -52,12 +52,11 @@
 		</ul>
 
 		<a href="slider_create.php">Create</a>
-<<<<<<< HEAD
 		|<a href="slider_create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
-=======
+
 		|<a href="slider-create.php">Trash (Delete | Restore)</a>
 		 | Download XL | Download PDF | Print View
->>>>>>> 3d63fe1ae30567f3cd0e068105167b8e233942a0
+
 	</div>
 
 	<div class="table-responsive">
