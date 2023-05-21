@@ -30,6 +30,7 @@ $slides= json_decode($dataSlides);
 
 <div class="row">
 	<div class="col-xl-12">
+	<div class="card">
 	<div class="card-header header-elements-inline">
 		<h5 class="card-title">Slides</h5>
 		<div class="header-elements">
@@ -95,6 +96,7 @@ $slides= json_decode($dataSlides);
 		</div>
 	</div>
 	</div>
+</div>
 </div>
 
 
