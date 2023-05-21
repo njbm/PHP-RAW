@@ -85,7 +85,7 @@
 				<td><?=$slide->caption?></td>
 				<td> 
 				<a href="slider_show.php?id=<?=$slide->id?>"><button class="btn btn-primary">Show</button></a>
-				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
+				<a href="slider_edit.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
 				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">D</button></a>
 
 				
