@@ -1,5 +1,9 @@
 <?php
 
+    session_start();
+    ini_set(option:'display_errors', value:'on');
+    error_reporting(error_level:'E_ALL');
+
 function d($var){
     echo "<pre>";
     print_r($var);
@@ -9,6 +13,19 @@ function d($var){
 function dd($var){
    d($var);
    die();
+}
+
+function set_session($key,$val)
+{
+    $_SESSION[$key]=$val;
+}
+
+function get_session($key)
+{
+    if (array_key_exists(key:$key, array:$_SESSION)&& !empty($_SESSION[$key])){
+        return $_SESSION[$key];
+    }
+    return null;
 }
 
 function redirect($url)
