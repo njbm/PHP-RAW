@@ -37,7 +37,7 @@
             </div>
 
             <div class="card-body" >
-                <form action="slider_create_processor.php" method="GET">
+                <form action="slider_create_processor.php" method="post" enctype="multipart/form-data">
                 <!-- <div class="form-group">
                     <label>ID</label>
                     <input type="text" class="form-control" placeholder="Give a ID">
@@ -65,18 +65,24 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Upload Picture</label>
+                    <input type="file" name="picture" class="form-control" placeholder="Choose a file">
+                    <input type="file" name="document" class="form-control" placeholder="Choose a file">
+                </div>
+
+                <!-- <div class="form-group">
                     <label>Add Picture</label>
                     <div class="uniform-uploader"><input type="file"  class="form-input-styled" data-fouc="">
                         <span class="filename text-muted" style="user-select: none;">No file selected</span>
                         <span class="action btn bg-pink-400 legitRipple" style="user-select: none;">Choose File</span>
                     </div>
                     <span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-                </div>
+                </div> -->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Description</label>
                     <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
-                </div>
+                </div> -->
 
                 <div class="text-left">
                     <button type="submit" class="btn btn-danger legitRipple"> Cancel  </button>

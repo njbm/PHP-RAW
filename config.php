@@ -1,8 +1,7 @@
 <?php
-
     session_start();
     ini_set(option:'display_errors', value:'on');
-    error_reporting(error_level:'E_ALL');
+    error_reporting(error_level:E_ALL);
 
 function d($var){
     echo "<pre>";
@@ -15,17 +14,27 @@ function dd($var){
    die();
 }
 
-function set_session($key,$val)
-{
+function set_session($key,$val){
     $_SESSION[$key]=$val;
 }
 
-function get_session($key)
-{
+function get_session($key){
     if (array_key_exists(key:$key, array:$_SESSION)&& !empty($_SESSION[$key])){
         return $_SESSION[$key];
     }
     return null;
+}
+
+function flush_session($key){
+    $value = get_session($key);
+    $_SESSION[$key] = '';
+    return $value;
+}
+
+function kill_session(){
+    session_destroy();
+    $_SESSION = null;
+    unset($_SESSION);
 }
 
 function redirect($url)
@@ -33,10 +42,20 @@ function redirect($url)
     header("location:$url");
 }
 
+function upload($target, $destination)
+{
+    move_uploaded_file($target, $destination);
+    return true;
+}
+
 $webroot = "http://SP.test".DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
 $partials = $docroot.DIRECTORY_SEPARATOR.'admin/partials'.DIRECTORY_SEPARATOR;
 $frontend_partials = $docroot.DIRECTORY_SEPARATOR.'frontend/partials'.DIRECTORY_SEPARATOR;
 $portal_partials = $docroot.DIRECTORY_SEPARATOR.'portal/partials'.DIRECTORY_SEPARATOR;
-$datasource = $docroot.DIRECTORY_SEPARATOR.'datasource'.DIRECTORY_SEPARATOR;
 
+$datasource = $docroot.DIRECTORY_SEPARATOR.'datasource'.DIRECTORY_SEPARATOR;
+$uploads = $docroot . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR;
+
+
+//$datasource_driver = "JSON"; // "Database, XML(optional), COOKIE/Session (learning only)

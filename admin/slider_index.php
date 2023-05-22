@@ -80,7 +80,9 @@
 			<tr>
 				<td title="<?=$slide->uuid?>"><?=++$key?></td>
 				<td><?=$slide->title?></td>
-				<td><img src="<?=$slide->src?>" height="70"></td>
+				<!-- <td><img src="<?php //=$slide->src?>" height="70"></td> -->
+				<td><img src="<?= $webroot.'uploads/'.$slide->src?>" style="width:100px;height:100px"></td>
+
 				<td><?=$slide->alt?></td>
 				<td><?=$slide->caption?></td>
 				<td> 
