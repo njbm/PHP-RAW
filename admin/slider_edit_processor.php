@@ -61,6 +61,6 @@ if (file_exists($datasource . "slideritems.json")) {
 if ($result) {
     $message = "Data is updated Successfully";
     set_session('message', $message);
-    // redirect("slider_index.php?message=".$message);
-    redirect("slider_index.php");
+     redirect("slider_index.php?message=".$message);
+    //redirect("slider_index.php");
 }

@@ -81,7 +81,8 @@
 
                 <!-- <div class="form-group">
                     <label>Description</label>
-                    <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
+                    <textarea rows="4" cols="4" name="description" class="form-control"
+                     placeholder="Write a Description"></textarea>
                 </div> -->
 
                 <div class="text-left">
