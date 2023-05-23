@@ -4,13 +4,13 @@
    $id = $_GET['id'];
     
    /** communicate with datasource and get data for that id */
-  $dataSlides = file_get_contents($datasource.DIRECTORY_SEPARATOR.'slideritems.json');
-  $slides = json_decode($dataSlides);
+   $dataProducts= file_get_contents($datasource.'productitems.json');
+   $products= json_decode($dataProducts);
   
-  $slide = null;
-  foreach($slides as $aslide){
-      if($aslide->id == $id){
-          $slide = $aslide;
+  $product = null;
+  foreach($products as $aproduct){
+      if($aproduct->id == $id){
+          $product = $aproduct;
           break;
       }
   }
@@ -51,11 +51,11 @@
 		
     <div class="card-group mb-6">
 					<div class="card shadow-0 border-0">
-						<img class="card-img-top img-fluid" src="<?=$webroot.'uploads/'.$slide->src?>" alt="<?=$aslide->alt?>">
+						<img class="card-img-top img-fluid" src="<?=$webroot.'uploads/'.$product->src?>" alt="">
 
 						<div class="card-body">
-							<h5 class="card-title"><?=$aslide->title?></h5>
-							<p class="card-text"><?=$aslide->caption?></p>
+							<h5 class="card-title"><?=$aproduct->title?></h5>
+							<p class="card-text"><?=$aproduct->caption?></p>
 						</div>
 
 					</div>

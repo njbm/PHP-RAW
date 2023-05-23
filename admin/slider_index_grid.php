@@ -60,9 +60,9 @@ $slides= json_decode($dataSlides);
 		<div class="col-sm-6 col-xl-3">
 			<div class="card">
 				<div class="card-img-actions mx-1 mt-1">
-					<img class="card-img img-fluid" src="<?=$slide->src?>" alt="<?=$slide->alt?>" height="200">
+					<img class="card-img img-fluid" src="<?=$webroot.'uploads/'.$slide->src?>" alt="<?=$slide->alt?>" height="200">
 					<div class="card-img-actions-overlay card-img">
-						<a href="<?=$slide->src?>" 
+						<a href="<?=$webroot.'uploads/'.$slide->src?>" 
 			class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round legitRipple" 
 						data-popup="lightbox" rel="group">
 							<i class="icon-plus3"></i>

@@ -15,7 +15,6 @@ if (upload($target, $destination)) {
 
 // validation
 
-
 // image processing
 
 // store : as json data to json file
@@ -24,6 +23,7 @@ if (upload($target, $destination)) {
 // $uuid = 'asdfasdf';
 // $src = $_POST['url'];
 // $src = $_POST['url'];
+
 $alt = $_POST['alt'];
 $title = $_POST['title'];
 $caption = $_POST['caption'];

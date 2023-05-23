@@ -1,23 +1,7 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 
-<<<<<<< HEAD
-<?php 
-   $id = $_GET['id'];
-    
-   /** communicate with datasource and get data for that id */
-  $dataSlides = file_get_contents($datasource.DIRECTORY_SEPARATOR.'slideritems.json');
-  $slides = json_decode($dataSlides);
-  
-  $slide = null;
-  foreach($slides as $aslide){
-      if($aslide->id == $id){
-          $slide = $aslide;
-          break;
-      }
-  }
 
 
-=======
 <?php
 /** collect the intended ID */
 $id = $_GET['id'];
@@ -41,11 +25,11 @@ foreach ($slides as $slide) {
 // $slide = $slides[$slideIndex];
 
 /**
- * @TODO
+ * @TOD
  * handle edge case
  * security: untrust user input
  */
->>>>>>> 10e749a6d8f83e1b9fa0cd7ceb4d57225868b2a3
+
 ?>
 
 <!DOCTYPE html>
@@ -85,93 +69,59 @@ foreach ($slides as $slide) {
                         </div>
                     </div>
 
-<<<<<<< HEAD
-                <div class="card-body">
-                    <form action="slider_edit_processor.php" method="GET">
+
+        <div class="card-body">
+                <form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>ID</label>
-                        <input type="text" class="form-control" placeholder="<?=$slide->id?>">
+                        <input type="hidden" name="id" class="form-control"  value="<?= $slide->id ?>">
+                        <input type="hidden" name="uuid" class="form-control"  value="<?= $slide->uuid ?>">
+                        <label>Title</label>
+                        <input type="text" name="title" class="form-control" placeholder="Give a Title" value="<?= $slide->title ?>">
                     </div>
                     <div class="form-group">
-                        <label>UUID</label>
-                        <input type="text" class="form-control" placeholder="<?=$slide->uuid?>">
-                    </div>
-                        <div class="form-group">
-                            <label>Title</label>
-                            <input type="text" value="<?=$slide->title?>" name="title" class="form-control" placeholder="Give a Title">
-                        </div>
-                        <div class="form-group">
-                            <label>Alternative</label>
-                            <input type="text" value="<?=$slide->alt?>" name="alt" class="form-control" placeholder="Alternative Name">
-                        </div>
+                        <label>Alt</label>
+                        <input type="text" name="alt" class="form-control" placeholder="Alternative Name">
 
-                        <div class="form-group">
-                            <label>Caption</label>
-                            <input type="text" value="<?=$slide->caption?>" name="caption" class="form-control" placeholder="Add a Caption">
-                        </div>
-                        <div class="form-group">
-                            <label>Picture URL</label>
-                            <input type="text" <?=$slide->src?> name="src" class="form-control" placeholder="Add a Caption">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Add Picture</label>
-                            <div class="uniform-uploader"><input type="file" class="form-input-styled" data-fouc="">
-                                <span class="filename text-muted" style="user-select: none;">No file selected</span>
-                                <span class="action btn bg-pink-400 legitRipple" style="user-select: none;">Choose File</span>
-=======
-                    <div class="card-body">
-                        <form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input type="hidden" name="id" class="form-control"  value="<?= $slide->id ?>">
-                                <input type="hidden" name="uuid" class="form-control"  value="<?= $slide->uuid ?>">
-                                <label>Title</label>
-                                <input type="text" name="title" class="form-control" placeholder="Give a Title" value="<?= $slide->title ?>">
-                            </div>
-                            <div class="form-group">
-                                <label>Alt</label>
-                                <input type="text" name="alt" class="form-control" placeholder="Alternative Name">
->>>>>>> 10e749a6d8f83e1b9fa0cd7ceb4d57225868b2a3
-                            </div>
-
-                            <div class="form-group">
-                                <label>Caption</label>
-                                <input type="text" name="caption" class="form-control" placeholder="Add a Caption">
-                            </div>
-                            <div class="form-group">
-                                <label>Upload Picture</label>
-                                <input type="file" name="picture" class="form-control" placeholder="Choose a file">
-                                <img src="<?=$webroot."uploads/".$slide->src?>" style="width:100px;height:100px">
-                                <input name="old_picture" type="text" class="form-control"  value="<?=$slide->src?>" />
-                            </div>
-                            <!-- <div class="form-group">
-                                <label>Url</label>
-                                <input type="text" name="src" class="form-control" placeholder="Add a Caption">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Add Picture</label>
-                                <div class="uniform-uploader"><input type="file" class="form-input-styled" data-fouc="">
-                                    <span class="filename text-muted" style="user-select: none;">No file selected</span>
-                                    <span class="action btn bg-pink-400 legitRipple" style="user-select: none;">Choose File</span>
-                                </div>
-                                <span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
-                            </div> -->
-
-                            <div class="text-left">
-                                <button type="submit" class="btn btn-danger legitRipple"> Cancel </button>
-                                <button type="submit" class="btn btn-primary legitRipple">
-                                    Submit <i class="icon-paperplane ml-2"></i></button>
-                            </div>
-                        </form>
                     </div>
 
-                </div>
+                    <div class="form-group">
+                        <label>Caption</label>
+                        <input type="text" name="caption" class="form-control" placeholder="Add a Caption">
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Picture</label>
+                        <input type="file" name="picture" class="form-control" placeholder="Choose a file">
+                        <img src="<?=$webroot."uploads/".$slide->src?>" style="width:100px;height:100px">
+                        <input name="old_picture" type="text" class="form-control"  value="<?=$slide->src?>" />
+                    </div>
+                    <!-- <div class="form-group">
+                        <label>Url</label>
+                        <input type="text" name="src" class="form-control" placeholder="Add a Caption">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Add Picture</label>
+                        <div class="uniform-uploader"><input type="file" class="form-input-styled" data-fouc="">
+                            <span class="filename text-muted" style="user-select: none;">No file selected</span>
+                            <span class="action btn bg-pink-400 legitRipple" style="user-select: none;">Choose File</span>
+                        </div>
+                        <span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
+                    </div> -->
+
+                    <div class="text-left">
+                        <button type="submit" class="btn btn-danger legitRipple"> Cancel </button>
+                        <button type="submit" class="btn btn-primary legitRipple">
+                            Submit <i class="icon-paperplane ml-2"></i></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
             </div>
         </div>
 

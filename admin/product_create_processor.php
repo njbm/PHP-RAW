@@ -1,34 +1,64 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
 
+$filename = $_FILES['picture']['name']; // if you want to keep the name as is
+$filename = uniqid() . "_" . $_FILES['picture']['name']; // if you want to keep the name as is with a uniq id
+$target = $_FILES['picture']['tmp_name'];
+$destination = $uploads . $filename;
+
+$src = null;
+if (upload($target, $destination)) {
+    $src = $filename;
+}
+
 // dd($_GET);
+// $id = "Not a Input ";
+// $uuid = "Not a Input";
+// $src = $_POST['url'];
 
-$id = "11";
-$uuid = "acsvv";
-$src = $_GET['url'];
-$alt = $_GET['alt'];
-$title = $_GET['title'];
-$caption = $_GET['caption'];
+$price = $_POST['price'];
+$title = $_POST['title'];
+$caption = $_POST['caption'];
 
-$slide = [
-    "id" => $id,
-    "uuid" => $uuid,
+$product = [
+    
+    "uuid" => uniqid(),
     "src" => $src,
-    "alt" => $alt,
+    "price" => $price,
     "title" => $title,
     "caption" => $caption,
 ];
 
-$dataSlides = file_get_contents($datasource . DIRECTORY_SEPARATOR . 'slideritems.json');
-$slides = json_decode($dataSlides);
+$currentId= null;
 
-$slides[] = (object)$slide;
-$dataSlide = json_encode($slides);
+$dataProducts= file_get_contents($datasource.'productitems.json');
+$products = json_decode($dataProducts);
 
-if (file_exists($datasource . "slideritems.json")) {
-    $result = file_put_contents($datasource . "slideritems.json", $dataSlide);
+if (count($products)>0)
+{
+    $ids = [];
+    foreach ($products as $aproduct) {
+        $ids[] = $aproduct->id;
+    }
+    sort($ids);
+    $lastIndex = count($ids) - 1;
+    $highestId = $ids[$lastIndex];
+    $currentId = $highestId+1;
+}
+else{
+    $currentId=1;
+}
+
+$product['id']=$currentId;
+
+$products[] = (object)$product;
+$dataProduct = json_encode($products);
+
+if (file_exists($datasource . "productitems.json")) {
+    $result = file_put_contents($datasource . "productitems.json", $dataProduct);
+    redirect('product_index.php');
 } else {
     echo "File not found";
 }
 
-dd($result);
+// dd($result);

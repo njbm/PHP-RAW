@@ -37,8 +37,8 @@
 				<?php
 					//if(array_key_exists('message', $_GET) && !empty($_GET['message'])):
 					// if(array_key_exists('message', $_SESSION) && !empty($_SESSION['message'])):
-						$message = flush_session('message');
-						if($message):
+					$message = flush_session('message');
+					if($message):
 				?>
 				<div class="alert alert-success"><?=$message?></div>
 				<?php endif ?>
@@ -82,7 +82,7 @@
 			</thead>
 			<tbody>
 
-<?php foreach($slides as $key=>$slide): ?> 
+	<?php foreach($slides as $key=>$slide): ?> 
 			<tr>
 				<td title="<?=$slide->uuid?>"><?=++$key?></td>
 				<td><?=$slide->title?></td>
@@ -108,13 +108,13 @@
 				
 				</td>
 			</tr>
-<?php endforeach ?>
+	<?php endforeach ?>
 
 			</tbody>
 		</table>
 	</div>
 </div>
-	</div>
+</div>
 </div>
 <!-- /dashboard content -->
 
