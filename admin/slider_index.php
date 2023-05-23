@@ -34,6 +34,15 @@
 	<div class="col-xl-12">
 					<!-- Bordered table -->
 <div class="card">
+				<?php
+					//if(array_key_exists('message', $_GET) && !empty($_GET['message'])):
+					// if(array_key_exists('message', $_SESSION) && !empty($_SESSION['message'])):
+						$message = flush_session('message');
+						if($message):
+				?>
+				<div class="alert alert-success"><?=$message?></div>
+				<?php endif ?>
+
 	<div class="card-header header-elements-inline">
 		<h5 class="card-title">Slides</h5>
 		<div class="header-elements">
@@ -73,33 +82,34 @@
 			</thead>
 			<tbody>
 
-<?php
-    foreach($slides as $key=>$slide):
-
-     ?> 
+<?php foreach($slides as $key=>$slide): ?> 
 			<tr>
 				<td title="<?=$slide->uuid?>"><?=++$key?></td>
 				<td><?=$slide->title?></td>
-				<td><img src="<?=$slide->src?>" height="70"></td>
+				<!-- <td><img src="<?php //=$slide->src?>" height="70"></td> -->
+				<td><img src="<?= $webroot.'uploads/'.$slide->src?>" style="width:100px;height:100px"></td>
+
 				<td><?=$slide->alt?></td>
 				<td><?=$slide->caption?></td>
 				<td> 
 				<a href="slider_show.php?id=<?=$slide->id?>"><button class="btn btn-primary">Show</button></a>
 				<a href="slider_edit.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
-				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">D</button></a>
-
+				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Copy</button></a>
 				
-				<form action="slider_delete.php" method="post">
+				
+				
+				<form action="slider_delete.php" method="post" style="margin-top: 10px; width:20px;">
 				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
 					<button class="btn btn-danger" type="submit">Delete</button>
 					<input type="hidden" name="id" value="<?=$slide->id?>" />
 				</form>
+				 <br>
+				<a href="slider_update.php?id=<?=$slide->id?>">Active/InActive</a>
 				
-				| Activate/InActive | Copy</td>
+				</td>
 			</tr>
-<?php
-endforeach
-?>
+<?php endforeach ?>
+
 			</tbody>
 		</table>
 	</div>

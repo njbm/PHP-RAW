@@ -1,22 +1,40 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
 
-// dd($_GET);
+$filename = $_FILES['picture']['name']; // if you want to keep the name as is
+$filename = uniqid() . "_" . $_FILES['picture']['name']; // if you want to keep the name as is
+$target = $_FILES['picture']['tmp_name'];
+$destination = $uploads . $filename;
 
-// $id = "1";
-// $uuid= "a";
-$url = $_GET['src'];
-$title= $_GET['title'];
-$caption= $_GET['caption'];
-$alt= $_GET['alt'];
+$src = null;
+if (upload($target, $destination)) {
+    $src = $filename;
+}
+
+// sanitize
+
+// validation
+
+
+// image processing
+
+// store : as json data to json file
+
+// $id = 11;
+// $uuid = 'asdfasdf';
+// $src = $_POST['url'];
+// $src = $_POST['url'];
+$alt = $_POST['alt'];
+$title = $_POST['title'];
+$caption = $_POST['caption'];
 
 $slide=[
-    "uuid"=>uniqid(),
-    "src"=>$url,
-    "title"=>$title,
-    "caption"=>$caption,
-    "alt"=>$alt
-];
+        "uuid"=>uniqid(),
+        "src"=>$src,
+        "title"=>$title,
+        "caption"=>$caption,
+        "alt"=>$alt
+        ];
 
 $currentId=null;
 
