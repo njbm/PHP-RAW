@@ -6,7 +6,7 @@
     "submenu": [
       {
         "name": "About",
-        "url": "product_index.php"
+        "url": "about.php"
       },
       {
         "name": "Contact",

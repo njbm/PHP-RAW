@@ -2,7 +2,7 @@
 
     session_start();
     ini_set(option:'display_errors', value:'on');
-    error_reporting(error_level:'E_ALL');
+    error_reporting(error_level:E_ALL);
 
 function d($var){
     echo "<pre>";

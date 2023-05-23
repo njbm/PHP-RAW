@@ -1,5 +1,23 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 
+<?php 
+   $id = $_GET['id'];
+    
+   /** communicate with datasource and get data for that id */
+  $dataSlides = file_get_contents($datasource.DIRECTORY_SEPARATOR.'slideritems.json');
+  $slides = json_decode($dataSlides);
+  
+  $slide = null;
+  foreach($slides as $aslide){
+      if($aslide->id == $id){
+          $slide = $aslide;
+          break;
+      }
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php include_once($partials . 'head.php') ?> <!--head-->
@@ -38,23 +56,31 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="slider_create_processor.php" method="GET">
+                    <form action="slider_edit_processor.php" method="GET">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" class="form-control" placeholder="<?=$slide->id?>">
+                    </div>
+                    <div class="form-group">
+                        <label>UUID</label>
+                        <input type="text" class="form-control" placeholder="<?=$slide->uuid?>">
+                    </div>
                         <div class="form-group">
                             <label>Title</label>
-                            <input type="text" name="title" class="form-control" placeholder="Give a Title">
+                            <input type="text" value="<?=$slide->title?>" name="title" class="form-control" placeholder="Give a Title">
                         </div>
                         <div class="form-group">
-                            <label>Alt</label>
-                            <input type="text" name="alt" class="form-control" placeholder="Alternative Name">
+                            <label>Alternative</label>
+                            <input type="text" value="<?=$slide->alt?>" name="alt" class="form-control" placeholder="Alternative Name">
                         </div>
 
                         <div class="form-group">
                             <label>Caption</label>
-                            <input type="text" name="caption" class="form-control" placeholder="Add a Caption">
+                            <input type="text" value="<?=$slide->caption?>" name="caption" class="form-control" placeholder="Add a Caption">
                         </div>
                         <div class="form-group">
-                            <label>Url</label>
-                            <input type="text" name="src" class="form-control" placeholder="Add a Caption">
+                            <label>Picture URL</label>
+                            <input type="text" <?=$slide->src?> name="src" class="form-control" placeholder="Add a Caption">
                         </div>
 
                         <div class="form-group">
