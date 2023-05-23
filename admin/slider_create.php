@@ -59,10 +59,10 @@
                     <label>Caption</label>
                     <input type="text" name="caption" class="form-control" placeholder="Add a Caption">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Url</label>
-                    <input type="text" name="src" class="form-control" placeholder="Add a Caption">
-                </div>
+                    <input type="text" name="src" class="form-control" placeholder="Give a Image URL">
+                </div> -->
 
                 <div class="form-group">
                     <label>Upload Picture</label>

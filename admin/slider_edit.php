@@ -67,7 +67,7 @@ foreach ($slides as $slide) {
                     </div>
 
                     <div class="card-body">
-                        <form action="slider_edit_processor.php" method="post">
+                        <form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input type="hidden" name="id" class="form-control"  value="<?= $slide->id ?>">
                                 <input type="hidden" name="uuid" class="form-control"  value="<?= $slide->uuid ?>">
@@ -84,6 +84,12 @@ foreach ($slides as $slide) {
                                 <input type="text" name="caption" class="form-control" placeholder="Add a Caption">
                             </div>
                             <div class="form-group">
+                                <label>Upload Picture</label>
+                                <input type="file" name="picture" class="form-control" placeholder="Choose a file">
+                                <img src="<?=$webroot."uploads/".$slide->src?>" style="width:100px;height:100px">
+                                <input name="old_picture" type="text" class="form-control"  value="<?=$slide->src?>" />
+                            </div>
+                            <!-- <div class="form-group">
                                 <label>Url</label>
                                 <input type="text" name="src" class="form-control" placeholder="Add a Caption">
                             </div>
@@ -100,7 +106,7 @@ foreach ($slides as $slide) {
                             <div class="form-group">
                                 <label>Description</label>
                                 <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
-                            </div>
+                            </div> -->
 
                             <div class="text-left">
                                 <button type="submit" class="btn btn-danger legitRipple"> Cancel </button>

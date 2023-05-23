@@ -1,7 +1,26 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
 
+$src = null;
+$old_picture = null;
+$new_picture = null;
 
+$old_picture = $_POST['old_picture'];
+
+if (array_key_exists('picture', $_FILES) && !empty($_FILES['picture']['name'])) {
+    $filename = $_FILES['picture']['name']; // if you want to keep the name as is
+    $filename = uniqid() . "_" . $_FILES['picture']['name']; // if you want to keep the name as is
+    $target = $_FILES['picture']['tmp_name'];
+    $destination = $uploads . $filename;
+
+    if (upload($target, $destination)) {
+        $new_picture = $filename;
+    }
+
+    if (file_exists($uploads . $old_picture)) {
+        unlink($uploads . $old_picture);
+    }
+}
 
 // d($_POST);
 
@@ -17,7 +36,9 @@
 
 $uuid = $_POST['uuid'];
 $id = $_POST['id'];
-$src = $_POST['url'];
+// $src = $_POST['url'];
+$src = $new_picture ?? $old_picture;
+
 $alt = $_POST['alt'];
 $title = $_POST['title'];
 $caption = $_POST['caption'];

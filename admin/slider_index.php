@@ -94,8 +94,8 @@
 				<td> 
 				<a href="slider_show.php?id=<?=$slide->id?>"><button class="btn btn-primary">Show</button></a>
 				<a href="slider_edit.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
-				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Copy</button></a> <br>
-				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Active/InActive</button></a>
+				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Copy</button></a>
+				
 				
 				
 				<form action="slider_delete.php" method="post" style="margin-top: 10px; width:20px;">
@@ -103,8 +103,10 @@
 					<button class="btn btn-danger" type="submit">Delete</button>
 					<input type="hidden" name="id" value="<?=$slide->id?>" />
 				</form>
+				 <br>
+				<a href="slider_update.php?id=<?=$slide->id?>">Active/InActive</a>
 				
-				| Activate/InActive | Copy</td>
+				</td>
 			</tr>
 <?php endforeach ?>
 

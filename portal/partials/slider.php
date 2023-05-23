@@ -46,7 +46,7 @@
             }
     ?>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?=$key?>" 
-        class="<?=$active?>" aria-label="Slide 1"></button>
+         class="<?=$active?>" aria-label="Slide 1"></button>
     <?php endforeach ?>
     
     </div>
