@@ -61,12 +61,12 @@
 		</ul>
 
 		<a href="slider_create.php">Create</a>
-		|<a href="slider_create.php">Trash (Delete | Restore)</a> |
+		|<a href="slider_create.php"> Trash </a> |
 
 		|<a href="slider_download_xl.php">  Download XL</a>
 		|<a href="slider_download_pdf.php"> Download PDF</a>
-		|<a href="slider-create.php"> Print View</a>
-		<?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
+		|<a href="slider_print.php"> Print View </a>
+		
 
 
 	</div>
@@ -77,10 +77,12 @@
 				<tr>
 					<th>#</th>
 					<th>Title</th>
-					<th>Src</th>
 					<th>Alt</th>
+					
 					<th>Caption</th>
+					<th>Src</th>
 					<th>Action</th>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -90,16 +92,14 @@
 				<td title="<?=$slide->uuid?>"><?=++$key?></td>
 				<td><?=$slide->title?></td>
 				<!-- <td><img src="<?php //=$slide->src?>" height="70"></td> -->
-				<td><img src="<?= $webroot.'uploads/'.$slide->src?>" style="width:100px;height:100px"></td>
-
 				<td><?=$slide->alt?></td>
 				<td><?=$slide->caption?></td>
+				<td><img src="<?= $webroot.'uploads/'.$slide->src?>" style="width:100px;height:100px"></td>
+
 				<td> 
 				<a href="slider_show.php?id=<?=$slide->id?>"><button class="btn btn-primary">Show</button></a>
 				<a href="slider_edit.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
-				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Copy</button></a>
-				
-				
+				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Copy</button></a>				
 				
 				<form action="slider_delete.php" method="post" style="margin-top: 10px; width:20px;">
 				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
