@@ -92,7 +92,7 @@ foreach ($slides as $slide) {
                         <label>Upload Picture</label>
                         <input type="file" name="picture" class="form-control" placeholder="Choose a file">
                         <img src="<?=$webroot."uploads/".$slide->src?>" style="width:100px;height:100px">
-                        <input name="old_picture" type="text" class="form-control"  value="<?=$slide->src?>" />
+                        <input name="old_picture" type="text" class="form-control"  value="<?= $webroot . "uploads/" . $slide->src?>" />
                     </div>
                     <!-- <div class="form-group">
                         <label>Url</label>

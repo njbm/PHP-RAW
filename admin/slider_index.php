@@ -61,10 +61,12 @@
 		</ul>
 
 		<a href="slider_create.php">Create</a>
-		|<a href="slider_create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
+		|<a href="slider_create.php">Trash (Delete | Restore)</a> |
 
-		|<a href="slider-create.php">Trash (Delete | Restore)</a>
-		 | Download XL | Download PDF | Print View
+		|<a href="slider_download_xl.php">  Download XL</a>
+		|<a href="slider-create.php"> Download PDF</a>
+		|<a href="slider-create.php"> Print View</a>
+		
 
 	</div>
 
@@ -100,7 +102,7 @@
 				
 				<form action="slider_delete.php" method="post" style="margin-top: 10px; width:20px;">
 				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
-					<button class="btn btn-danger" type="submit">Delete</button>
+					<button class="btn btn-danger" type="submit" onclick="return confirm('Are You Sure?')">Delete</button>
 					<input type="hidden" name="id" value="<?=$slide->id?>" />
 				</form>
 				 <br>

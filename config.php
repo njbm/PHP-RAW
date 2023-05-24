@@ -55,7 +55,7 @@ $frontend_partials = $docroot.DIRECTORY_SEPARATOR.'frontend/partials'.DIRECTORY_
 $portal_partials = $docroot.DIRECTORY_SEPARATOR.'portal/partials'.DIRECTORY_SEPARATOR;
 
 $datasource = $docroot.DIRECTORY_SEPARATOR.'datasource'.DIRECTORY_SEPARATOR;
-$uploads = $docroot . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR;
+$uploads = $docroot . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR;
 
 
 //$datasource_driver = "JSON"; // "Database, XML(optional), COOKIE/Session (learning only)
