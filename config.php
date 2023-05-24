@@ -2,6 +2,7 @@
     session_start();
     ini_set(option:'display_errors', value:'on');
     error_reporting(error_level:E_ALL);
+include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . "vendor" . DIRECTORY_SEPARATOR . "autoload.php");
 
 function d($var){
     echo "<pre>";

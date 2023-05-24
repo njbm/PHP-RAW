@@ -64,9 +64,10 @@
 		|<a href="slider_create.php">Trash (Delete | Restore)</a> |
 
 		|<a href="slider_download_xl.php">  Download XL</a>
-		|<a href="slider-create.php"> Download PDF</a>
+		|<a href="slider_download_pdf.php"> Download PDF</a>
 		|<a href="slider-create.php"> Print View</a>
-		
+		<?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
+
 
 	</div>
 
