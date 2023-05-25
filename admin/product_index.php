@@ -96,7 +96,7 @@ $products = json_decode($dataProducts);
 				
 				<form action="product_delete.php" method="post" style="margin-top: 10px; width:20px;">
 				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
-					<button class="btn btn-danger" type="submit">Delete</button>
+					<button class="btn btn-danger" type="submit" onclick="return confirm('Are you Sure')">Delete</button>
 					<input type="hidden" name="id" value="<?=$product->id?>" />
 				</form>
 				 <br>
