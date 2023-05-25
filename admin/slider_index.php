@@ -97,7 +97,7 @@
 				<td> 
 				<a href="slider_show.php?id=<?=$slide->id?>"><button class="btn btn-primary">Show</button></a>
 				<a href="slider_edit.php?id=<?=$slide->id?>"><button class="btn btn-info">Edit</button></a>
-				<a href="slider_update.php?id=<?=$slide->id?>"><button class="btn btn-primary">Copy</button></a>				
+				<a href="<?=$webroot.'uploads/'.$slide->src?>"><button class="btn btn-primary">Img</button></a>				
 				
 				<form action="slider_delete.php" method="post" style="margin-top: 10px; width:20px;">
 				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->

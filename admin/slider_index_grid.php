@@ -48,8 +48,13 @@ $slides= json_decode($dataSlides);
 			<li><a href="slider_index.php">List View</a></li>
 		</ul>
 
-		<a href="slider-create.php">Create</a>
-		|<a href="slider-create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
+		<a href="slider_create.php">Create</a>
+		|<a href="slider_create.php"> Trash </a> |
+
+		|<a href="slider_download_xl.php">  Download XL</a>
+		|<a href="slider_download_pdf.php"> Download PDF</a>
+		|<a href="slider_print.php"> Print View </a>
+
 	</div>
 
 	<div class="table-responsive">
@@ -60,7 +65,8 @@ $slides= json_decode($dataSlides);
 		<div class="col-sm-6 col-xl-3">
 			<div class="card">
 				<div class="card-img-actions mx-1 mt-1">
-					<img class="card-img img-fluid" src="<?=$webroot.'uploads/'.$slide->src?>" alt="<?=$slide->alt?>" height="200">
+					<img class="card-img img-fluid" src="<?=$webroot.'uploads/'.$slide->src?>"
+					 alt="<?=$slide->alt?>" style="height:150px">
 					<div class="card-img-actions-overlay card-img">
 						<a href="<?=$webroot.'uploads/'.$slide->src?>" 
 			class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round legitRipple" 
@@ -84,9 +90,14 @@ $slides= json_decode($dataSlides);
 
 						<div class="list-icons list-icons-extended ml-auto">
 							<a href="#" class="list-icons-item"><i class="icon-download top-0"></i></a>
-							<a href="#" class="list-icons-item"><i class="icon-pencil7"></i></a>
+							<a href="slider_edit.php?id=<?=$slide->id?>" class="list-icons-item"><i class="icon-pencil7"></i></a>
 							<a href="slider_show.php?id=<?=$slide->id?>" class="list-icons-item"><i class="icon-eye2"></i></a>
-							<a href="#" class="list-icons-item"><i class="icon-bin top-0"></i></a>
+							<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>" class="list-icons-item"><i class="icon-bin top-0"></i></a> -->
+							<form action="slider_delete.php" method="post" >
+								<button class="btn btn-danger" type="submit" onclick="return confirm('Are You Sure?')"><i class="icon-bin top-02"></i></button>
+								<input type="hidden" name="id" value="<?=$slide->id?>" />
+							</form>
+							
 						</div>
 					</div>
 				</div>
