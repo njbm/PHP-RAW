@@ -44,6 +44,7 @@ $src = $new_picture ?? $old_picture;
 $price = $_POST['price'];
 $title = $_POST['title'];
 $caption = $_POST['caption'];
+$description =$_POST['description'];
 
 $product = [
             'id'=>$id,
@@ -51,7 +52,8 @@ $product = [
             'src'=>$src,
             'price'=>$price,
             'title'=>$title,
-            'caption'=>$caption
+            'caption'=>$caption,
+            "description" =>$description
         ];
 
 

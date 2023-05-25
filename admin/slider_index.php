@@ -66,8 +66,6 @@
 		|<a href="slider_download_xl.php">  Download XL</a>
 		|<a href="slider_download_pdf.php"> Download PDF</a>
 		|<a href="slider_print.php"> Print View </a>
-		
-
 
 	</div>
 

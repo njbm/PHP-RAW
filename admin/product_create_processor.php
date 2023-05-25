@@ -19,6 +19,7 @@ if (upload($target, $destination)) {
 $price = $_POST['price'];
 $title = $_POST['title'];
 $caption = $_POST['caption'];
+$description =$_POST['description'];
 
 $product = [
     
@@ -27,6 +28,7 @@ $product = [
     "price" => $price,
     "title" => $title,
     "caption" => $caption,
+    "description" =>$description
 ];
 
 $currentId= null;

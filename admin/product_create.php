@@ -79,12 +79,12 @@
                         <span class="action btn bg-pink-400 legitRipple" style="user-select: none;">Choose File</span>
                     </div>
                     <span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
-                </div>
+                </div>-->
 
                 <div class="form-group">
                     <label>Description</label>
                     <textarea rows="4" cols="4" name="description" class="form-control" placeholder="Write a Description"></textarea>
-                </div> -->
+                </div> 
 
                 <div class="text-left">
                     <button type="submit" class="btn btn-danger legitRipple"> Cancel  </button>

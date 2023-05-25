@@ -52,15 +52,16 @@ $products = json_decode($dataProducts);
 
 	<div class="card-body">
 		<ul>
-			<li><a href="slider_index_grid.php">Grid View</a></li>
-			<li><a href="slider_index.php">List View</a></li>
+			<li><a href="product_index_grid.php">Grid View</a></li>
+			<li><a href="product_index.php">List View</a></li>
 		</ul>
 
 		<a href="product_create.php">Create</a>
-		|<a href="productr_create.php">Trash (Delete | Restore)</a> | Download XL | Download PDF | Print View
+		|<a href="product_create.php"> Trash </a> |
 
-		|<a href="product-create.php">Trash (Delete | Restore)</a>
-		 | Download XL | Download PDF | Print View
+		|<a href="product_download_xl.php">  Download XL</a>
+		|<a href="product_download_pdf.php"> Download PDF</a>
+		|<a href="product_print.php"> Print View </a>
 
 	</div>
 
@@ -95,7 +96,7 @@ $products = json_decode($dataProducts);
 				
 				
 				<form action="product_delete.php" method="post" style="margin-top: 10px; width:20px;">
-				<!-- <a href="slider_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
+				<!-- <a href="product_delete.php?id=<?php //=$slide->id?>">Delete</a>  -->
 					<button class="btn btn-danger" type="submit" onclick="return confirm('Are you Sure')">Delete</button>
 					<input type="hidden" name="id" value="<?=$product->id?>" />
 				</form>
