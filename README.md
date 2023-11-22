@@ -1,17 +1,8 @@
 # PHP-RAW
 
-# Your Project Name
+# About Project
 
-A brief description of your project.
-
-## Table of Contents
-
--  [Getting Started](#getting-started)
-   -  [Prerequisites](#prerequisites)
-   -  [Installation](#installation)
--  [Usage](#usage)
--  [Contributing](#contributing)
--  [License](#license)
+<p> This project is created by "<a href="https://jaber.netlify.app">Jaber Masud</a>". To know about him, Search on google by :  "Jaber Masud" or "masud9900" </p>
 
 ## Getting Started
 
@@ -29,13 +20,13 @@ What things you need to install and how to install them:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/njbm/PHP-RAW.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd your-project
+   cd PHP-RAW
    ```
 
 3. Install dependencies:
@@ -44,30 +35,18 @@ What things you need to install and how to install them:
    composer install
    ```
 
-4. Copy the example configuration file:
+4. Run Autoload:
 
    ```bash
-   cp .env.example .env
+   composer dumpautoload
    ```
 
-5. Configure your environment variables in the `.env` file.
+5. Configure your environment variables in the `config.php` file. (optional)
 
 6. Run the project:
 
-   ```bash
-   php -S localhost:8000 -t public
-   ```
+   Your project will be accessible at [http://localhost/PHP-RAW/].
 
-   Your project will be accessible at [http://localhost:8000](http://localhost:8000).
+## Problem?
 
-## Usage
-
-Explain how to use your project and provide examples.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests to us.
-
-## License
-
-This project is licensed under the [LICENSE NAME] - see the [LICENSE.md](LICENSE.md) file for details.
+if you are facing any problem then contact with me.
