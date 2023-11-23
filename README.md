@@ -12,7 +12,7 @@ These instructions will help you get a copy of the project up and running on you
 
 What things you need to install and how to install them:
 
--  [PHP](https://www.php.net/) (version x.x.x)
+-  [PHP](https://www.php.net/) (version ^8)
 -  [Composer](https://getcomposer.org/)
 
 ### Installation
@@ -45,7 +45,7 @@ What things you need to install and how to install them:
 
 6. Run the project:
 
-   Your project will be accessible at [http://localhost/PHP-RAW/].
+   Your project will be accessible at [http://localhost/PHP-RAW/](http://localhost/PHP-RAW/).
 
 ## Problem?
 
