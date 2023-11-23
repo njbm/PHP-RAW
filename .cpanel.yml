@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kitedubd/public_html/
+    - export DEPLOYPATH=/home/kitedubd/public_html/PHP-RAW
     - rsync -av --exclude=".git" * $DEPLOYPATH
