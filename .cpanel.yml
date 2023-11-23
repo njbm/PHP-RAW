@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kitedubd/public_html/
-    - /bin/cp * $DEPLOYPATH
+    - rsync -av --exclude=".git" * $DEPLOYPATH
