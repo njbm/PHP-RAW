@@ -2,9 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kitedubd/jaber.kit.edu.bd/PHP-RAW
-    - rsync -av --exclude=".git" /path/to/your/local/project/* $DEPLOYPATH
+    # - rsync -av --exclude=".git" /path/to/your/local/project/* $DEPLOYPATH
 
 
     # - rsync -av --exclude=".git" * $DEPLOYPATH
 
-    # - /bin/cp -R * /home/kitedubd/jaber.kit.edu.bd/PHP-RAW
+    - /bin/cp -R * /home/kitedubd/jaber.kit.edu.bd/PHP-RAW
