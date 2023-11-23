@@ -51,7 +51,7 @@ function upload($target, $destination)
     return true;
 }
 
-$webroot = "http://localhost/PHP-RAW/" ;
+$webroot = "http://kit.edu.bd/PHP-RAW/" ;
 $docroot = $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 'PHP-RAW';
 $partials = $docroot.DIRECTORY_SEPARATOR.'admin/partials'.DIRECTORY_SEPARATOR;
 $frontend_partials = $docroot.DIRECTORY_SEPARATOR.'frontend/partials'.DIRECTORY_SEPARATOR;
